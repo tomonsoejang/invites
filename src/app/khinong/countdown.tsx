@@ -30,29 +30,8 @@ export default function CountDown() {
 
   const countdown = `${days}d ${hours}h ${minutes}m ${seconds}s`;
 
-  const images = {
-    background:
-      'https://tomonso-invites.s3.ap-south-1.amazonaws.com/background.jpg',
-    card: 'https://tomonso-invites.s3.ap-south-1.amazonaws.com/card.png',
-    one: 'https://tomonso-invites.s3.ap-south-1.amazonaws.com/1.jpeg',
-    two: 'https://tomonso-invites.s3.ap-south-1.amazonaws.com/2.jpeg',
-    three: 'https://tomonso-invites.s3.ap-south-1.amazonaws.com/3.jpeg',
-    four: 'https://tomonso-invites.s3.ap-south-1.amazonaws.com/4.jpeg',
-  };
-
   return (
     <div>
-      <div style={{ width: '100%' }}>
-        <Image
-          src={images.card}
-          alt="Picture of the author"
-          width={500}
-          height={500}
-          layout="responsive"
-          // blurDataURL="data:..." automatically provided
-          // placeholder="blur" // Optional blur-up while loading
-        />
-      </div>
       <div
         style={{
           fontSize: '2rem',

@@ -1,5 +1,8 @@
 import { Happy_Monkey } from 'next/font/google';
 import CountDown from './countdown';
+import Image from 'next/image';
+import { images } from './data/images';
+import Gallery from './gallery';
 
 const happyMonkey = Happy_Monkey({
   weight: '400',
@@ -23,6 +26,18 @@ export default function Khinong() {
     </div>
   );
 
+  const cardImage = (
+    <div style={{ width: '100%' }}>
+      <Image
+        src={images.card}
+        alt="Picture of the author"
+        width={500}
+        height={500}
+        layout="responsive"
+      />
+    </div>
+  );
+
   const displayCountdown = <CountDown />;
 
   return (
@@ -31,10 +46,13 @@ export default function Khinong() {
         display: 'flex',
         flexDirection: 'column',
         minHeight: '100vh',
+        background: '#f8dbe0',
       }}
     >
+      {cardImage}
       {/* {displayTitle} */}
       {displayCountdown}
+      <Gallery />
     </div>
   );
 }
