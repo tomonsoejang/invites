@@ -40,6 +40,18 @@ export default function Khinong() {
 
   const displayCountdown = <CountDown />;
 
+  const displayDesigner = (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      Designed at Tomonso FutureLabs
+    </div>
+  );
+
   return (
     <div
       style={{
@@ -47,12 +59,14 @@ export default function Khinong() {
         flexDirection: 'column',
         minHeight: '100vh',
         background: '#f8dbe0',
+        paddingBottom: '2rem',
       }}
     >
       {cardImage}
       {/* {displayTitle} */}
       {displayCountdown}
       <Gallery />
+      {displayDesigner}
     </div>
   );
 }
