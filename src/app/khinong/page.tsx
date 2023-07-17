@@ -3,6 +3,7 @@ import CountDown from './countdown';
 import Image from 'next/image';
 import { images } from './data/images';
 import Gallery from './gallery';
+import Head from 'next/head';
 
 const happyMonkey = Happy_Monkey({
   weight: '400',
@@ -52,6 +53,11 @@ export default function Khinong() {
     </div>
   );
 
+  const message = `You're invited`;
+  const displayMessage = (
+    <div style={{ display: 'flex', justifyContent: 'center' }}>{message}</div>
+  );
+
   return (
     <div
       style={{
@@ -60,10 +66,12 @@ export default function Khinong() {
         minHeight: '100vh',
         background: '#f8dbe0',
         paddingBottom: '2rem',
+        // alignItems: 'center',
       }}
     >
       {cardImage}
       {/* {displayTitle} */}
+      {displayMessage}
       {displayCountdown}
       <Gallery />
       {displayDesigner}
