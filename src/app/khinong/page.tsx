@@ -45,6 +45,8 @@ export default function Khinong() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        paddingTop: '1rem',
+        paddingBottom: '1rem',
       }}
     >
       Designed at Tomonso FutureLabs
@@ -63,8 +65,6 @@ export default function Khinong() {
         flexDirection: 'column',
         minHeight: '100vh',
         background: '#f8dbe0',
-        paddingBottom: '2rem',
-        // alignItems: 'center',
       }}
     >
       {cardImage}
