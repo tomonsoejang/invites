@@ -3,7 +3,7 @@ import CountDown from './countdown';
 import Image from 'next/image';
 import { images } from './data/images';
 import Gallery from './gallery';
-import Head from 'next/head';
+import { textData } from './data/text';
 
 const happyMonkey = Happy_Monkey({
   weight: '400',
@@ -11,8 +11,6 @@ const happyMonkey = Happy_Monkey({
 });
 
 export default function Khinong() {
-  const title = `Khinong's Solid Food`;
-
   const displayTitle = (
     <div
       className={happyMonkey.className}
@@ -23,7 +21,7 @@ export default function Khinong() {
         alignItems: 'center',
       }}
     >
-      {title}
+      {textData.title}
     </div>
   );
 

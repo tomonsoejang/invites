@@ -1,17 +1,18 @@
 import Khinong from './khinong/page';
 import { images } from './khinong/data/images';
 import { Metadata } from 'next';
+import { textData } from './khinong/data/text';
 
 export const metadata: Metadata = {
   openGraph: {
-    title: `Khinong's Solid Food`,
-    description: `Join us on Khinong's solid food`,
+    title: textData.title,
+    description: textData.description,
     images: [
       {
         url: images.cardThumbnail,
         width: 500,
         height: 500,
-        alt: `Khinong's Solid Food`,
+        alt: textData.title,
       },
     ],
     type: 'website',
